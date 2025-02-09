@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue to Lexica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #121212;
+            color: white;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        button {
+            background-color: #ff4d00;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Click Below to Continue</h2>
+        <p>You need to watch an ad before proceeding.</p>
+        <button id="continueBtn">Click to Continue</button>
+    </div>
+
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", function() {
+            // Open Adsterra Ad Link in New Tab
+            window.open("https://www.effectiveratecpm.com/dc5jzdyyeq?key=b0eb67688b5208dc0c11ec012a5d335c", "_blank");
+
+            // Disable Button to Prevent Spam Clicks
+            this.disabled = true;
+            this.innerText = "Please Wait...";
+
+            // Wait 10 Seconds, then Redirect to Lexica.art
+            setTimeout(function() {
+                window.location.href = "https://lexica.art";
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
